@@ -1,0 +1,157 @@
+/*
+
+CSS for creating liquid grid layouts, table is from the text Wrox Beginning
+HTML, XHTML, CSS, and JavaScript. In this CSS I am creating a liquid
+CSS as a counter example to the fixed grid layout in ch09_eg07.html
+
+Used http://www.sensefulsolutions.com/2010/10/format-text-as-table.html
+to create the table. Awesome tool.
++----------+----------------------------------+-------------------------+
+|  Column  | Pixel size in fixed-width design | % size in liquid layout |
++----------+----------------------------------+-------------------------+
+| Gutter 1 | 10px                             | 2%                      |
+| Column 1 | 300px                            | 30%                     |
+| Gutter 2 | 20px                             | 2%                      |
+| Column 2 | 300px                            | 30%                     |
+| Gutter 3 | 20px                             | 2%                      |
+| Column 3 | 300px                            | 30%                     |
+| Gutter 4 | 10px                             | 2%                      |
++----------+----------------------------------+-------------------------+
++----------+----------------------------------+-------------------------+
+| Total    | 960px                            | 98%                     |
++----------+----------------------------------+-------------------------+
+
+pg 403. The final row shws that the entire width of the design is only
+going to take up 98% of the screen. You ust leave 2% extra space to the 
+right of the page because when browsers calculate percentrages they round
+the size to the nearest pixel, and therefore if the design tried to 
+take up 100% of the browser window, the total width might be more than 
+is available (which would throw out the entire layout).
+
+Note: In the fluid layout we use margin-left and not margin-right
+
+Setting the max-width for each row to 1200px.
+Not quite sure about the min-width yet.
+
+*/
+
+
+#body {
+	margin:0px;
+	background-color:#ffffff;
+    font-family:arial, verdana, sans-serif;
+}
+
+#header {
+	background-color:#cccccc;
+	padding:10px;
+	height:120px;
+}
+
+#navigation {
+	background-color:#efefef;
+	padding:10px;
+	height:40px;
+}
+
+#footer {
+	background-color:#cccccc;
+	padding:10px;
+	height:40px;
+	clear:both;
+	border-top:20px solid #ffffff;
+}
+
+
+/* 2 columns */
+.column1of2, .column2of2 {
+	float:left;
+	width:44%;
+	background-color:#cccccc;
+	padding:1%;
+	margin-top:20px;
+    min-width: 100px;
+    max-width: 600px;
+    margin-left: 2%;
+}
+
+
+/* 3 columns */
+.column1of3, .column2of3, .column3of3 {
+	float:left;
+	width:28%; /* 280px; */
+	background-color: #cccccc;
+	padding: 1%;
+	margin-top:20px;
+    min-width: 100px;
+    max-width: 400px;
+    margin-left: 2%;
+}
+
+.columns1and2of3, .columns2and3of3 {
+	float:left;
+	width: 60%; /* 600px; */
+	background-color:#cccccc;
+	padding: 1%;
+	margin-top: 20px;
+    min-width: 100px;
+    max-width: 800px;
+    margin-left: 2%;
+}
+
+
+/* 4 columns */
+.column1of4, .column2of4, .column3of4, .column4of4 {
+	float:left;
+	width:20%;
+	background-color:#cccccc;
+	padding:1%;
+	margin-top:20px;
+    min-width: 100px;
+    max-width: 300px;
+    margin-left: 2%;
+}
+
+
+.columns1and2and3of4, .columns2and3and4of4 {
+	float: left;
+	width: 68%;
+	background-color: #cccccc;
+	padding: 1%;
+	margin-top: 20px;
+    min-width: 100px;
+    max-width: 900px;
+    margin-left: 2%;
+}
+
+.columns2and3of4 {
+	float:left;
+	width:44%;
+	background-color:#cccccc;
+	padding:1%;
+	margin-top:20px;
+    min-width: 100px;
+    max-width: 600px;
+    margin-left: 2%;
+}
+
+
+/* 6 columns */
+.column1of6, .column2of6, .column3of6, .column4of6, .column5of6, .column6of6 {
+	float: left;
+	width: 12%;
+	background-color: #cccccc;
+	padding: 1%;
+	margin-top: 20px;
+    min-width: 50px;
+    max-width: 200px;
+    margin-left: 2%;
+}
+
+
+.column1of3, .column1of4, .column1of6 {clear:both;}
+.column1of2, .columns1and2and3of4 {clear:both;}
+
+
+
+

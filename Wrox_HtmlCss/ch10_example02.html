@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Try it out</title>
+  <meta name="description" content="WROX Chapter Table example 2">
+  <meta name="author" content="Jacqueline Flemming">
+
+  <link rel="stylesheet" href="ch10_example02.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <form name="frmExample" action="" method="post">
+        <fieldset>
+            <legend>Register with us:</legend>
+            <label for="fname">First name: <span class="required">*</span></label>
+            <div class="input">
+                <input type="text" name="txtFirstname" id="fname" size="12" />
+            </div>
+
+            <label for="lname">Last name: <span class="required">*</span></label>
+            <div class="input">
+                <input type="text" name="txtLastname" id="lname" size="12" />
+            </div>
+            
+            <label for="email">Email: <span class="required">*</span></label>
+            <div class="input">
+                <input type="text" name="txtEmail" id="fname" size="20" />
+            </div>
+            
+            <label for="pwd">Password: <span class="required">*</span></label>
+            <div class="input">
+                <input type="password" name="txtPassword" id="pwd" size="12" />
+                <span class="small"> must be between 6 and 12 characters long</span>
+            </div>
+            
+            <label for="pwdConf">Confirm password: <span class="required">*</span></label>
+            <div class="input">
+                <input type="password" name="txtPasswordConf" id="pwdConf" size="12" />
+            </div>
+            <div class="submit">
+                <input type="submit" value="Register" />
+            </div>
+            <span class="required">*</span> = required
+        </fieldset>
+    </form>
+</body>
+</html>
