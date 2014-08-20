@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <title>TITLE</title>
+        <style type="text/css">
+
+          img {
+            margin: 20px;
+            transition: all 400ms; 
+          }
+
+          /* or use CSS */
+          .rotate90 {
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+          }
+
+        </style>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+        </script>
+
+        <script type="text/javascript">
+            /* jslint   browser : true,   continue    : true,
+               devel    : true, indent : 2, maxerr : 50,
+               newcap   : true, nomen   : true, plusplus    :true,
+               regexp   : true, sloppy  : true, vars    :true,
+               white    : true
+             */
+
+            function rotateFunction ($)
+            {
+              function doRotate()
+              {
+                var deg = $(this).data("rotate") || 0;
+
+                var rotate = 'rotate(' + $(this).data('rotate') + 'deg)';
+
+                $(this).css({ 
+                    '-webkit-transform': rotate,
+                    '-moz-transform': rotate,
+                    '-o-transform': rotate,
+                    '-ms-transform': rotate,
+                    'transform': rotate 
+                    });
+              }
+              $('img').each(doRotate());
+              return true;
+            };
+
+            jQuery(window).load(rotateFunction(jQuery));
+ 
+        </script>
+    </head>
+    <body>
+<img src="http://placekitten.com/220/80" data-rotate="90" />
+<img src="http://placekitten.com/110/110/" data-rotate="45" />
+<img src="http://placekitten.com/120/120/" />
+
+<!-- or use CSS -->
+<img src="http://placekitten.com/130/130/" class="rotate90" />
+    </body>
+</html>
